@@ -16,8 +16,8 @@ d.addEventListener("DOMContentLoaded",e=>{
     
     //    
     standarMode();
-    menuCalc();
-    darkLightModes();
+    menuCalc();    
     modesCalc();
     modesInteraction();
 });
+darkLightModes();

@@ -49,8 +49,6 @@ body{
     justify-content: flex-end;
     z-index: 999;    
 }
-.calc_settings .user-mode{   
-}
 .calc_settings .user-mode i{
     font-size: 1.8rem;
     cursor: pointer;
@@ -83,8 +81,7 @@ body{
     display: grid;
     grid-template-columns: repeat(3,minmax(100px,300px));
     text-align: center;
-    gap: 2px;
-    /*background: var(--background-calcButtons);*/
+    gap: 2px;    
 }
 
 
