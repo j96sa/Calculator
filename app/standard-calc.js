@@ -6,14 +6,12 @@ export function standarMode(){
     $calc = d.querySelector(".calc");
 
     let hisVal,op,inptVal;
-
+    
 
     //*********TODO EL CODIGO FUNCIONAL DE LA CALCULADORA ********************/
-    //*********Y EL DE LA INTRODUCCION DE LOS DIGITOS EN PANTALLA DE LSO MODOS */
-    d.addEventListener("click",e=>{  
-        
-        const $calcDisplay = d.querySelector(".select_cont-1 h2"),
-        $calcResult = d.querySelector(".select_cont-2 h2");        
+    //*********Y EL DE LA INTRODUCCION DE LOS DIGITOS EN PANTALLA DE LOS MODOS */
+    d.addEventListener("click",e=>{          
+        const $calcDisplay = d.querySelector(".select_cont-1 h2");                
 
         //**PARA INSERTAR LOS NUMEROS EN EL DISPLAY* Y EVITAR INCLUIR MAS DE UN PUNTO/
         if(e.target.matches(".calc_buttons .butt-number")){
@@ -108,68 +106,131 @@ export function standarMode(){
     //CODIGO PARA INTERACTUAR CON LA CALCULADORA MEDIANTE EL TECLADO
     d.addEventListener("keyup",e=>{    
         e.preventDefault();
-    
+        const $valNumber = d.querySelector(".select_cont-1 h2");        
+
         switch (e.key) {
             case "1":
-                if ($display.innerText === "0") $display.innerText = "";
-                $display.innerText = $display.innerText += e.key;
+                if ($calc.classList.contains("modeActive")){
+                    if ($valNumber.innerText === "0") $valNumber.innerText = "";
+                    $valNumber.innerText += e.key;
+                }else{
+                    if ($display.innerText === "0") $display.innerText = "";
+                    $display.innerText += e.key;
+                };
             break;
         
             case "2":
-                if ($display.innerText === "0") $display.innerText = "";
-                $display.innerText = $display.innerText += e.key;
+                if ($calc.classList.contains("modeActive")){
+                    if ($valNumber.innerText === "0") $valNumber.innerText = "";
+                    $valNumber.innerText += e.key;
+                }else{
+                    if ($display.innerText === "0") $display.innerText = "";
+                    $display.innerText += e.key;
+                }
             break;
     
             case "3":
-                if ($display.innerText === "0") $display.innerText = "";
-                $display.innerText = $display.innerText += e.key;
+                if ($calc.classList.contains("modeActive")){
+                    if ($valNumber.innerText === "0") $valNumber.innerText = "";
+                    $valNumber.innerText += e.key;
+                }else{
+                    if ($display.innerText === "0") $display.innerText = "";
+                    $display.innerText += e.key;
+                }
             break;
     
             case "4":
-                if ($display.innerText === "0") $display.innerText = "";
-                $display.innerText = $display.innerText += e.key;
+                if ($calc.classList.contains("modeActive")){
+                    if ($valNumber.innerText === "0") $valNumber.innerText = "";
+                    $valNumber.innerText += e.key;
+                }else{
+                    if ($display.innerText === "0") $display.innerText = "";
+                    $display.innerText += e.key;
+                }
             break;
     
             case "5":
-                if ($display.innerText === "0") $display.innerText = "";
-                $display.innerText = $display.innerText += e.key;
+                if ($calc.classList.contains("modeActive")){
+                    if ($valNumber.innerText === "0") $valNumber.innerText = "";
+                    $valNumber.innerText += e.key;
+                }else{
+                    if ($display.innerText === "0") $display.innerText = "";
+                    $display.innerText += e.key;
+                }
             break;
     
             case "6":
-                if ($display.innerText === "0") $display.innerText = "";
-                $display.innerText = $display.innerText += e.key;
+                if ($calc.classList.contains("modeActive")){
+                    if ($valNumber.innerText === "0") $valNumber.innerText = "";
+                    $valNumber.innerText += e.key;
+                }else{
+                    if ($display.innerText === "0") $display.innerText = "";
+                    $display.innerText += e.key;
+                }
             break;
     
             case "7":
-                if ($display.innerText === "0") $display.innerText = "";
-                $display.innerText = $display.innerText += e.key;
+                if ($calc.classList.contains("modeActive")){
+                    if ($valNumber.innerText === "0") $valNumber.innerText = "";
+                    $valNumber.innerText += e.key;
+                }else{
+                    if ($display.innerText === "0") $display.innerText = "";
+                    $display.innerText += e.key;
+                }
             break;
     
             case "8":
-                if ($display.innerText === "0") $display.innerText = "";
-                $display.innerText = $display.innerText += e.key;
+                if ($calc.classList.contains("modeActive")){
+                    if ($valNumber.innerText === "0") $valNumber.innerText = "";
+                    $valNumber.innerText += e.key;
+                }else{
+                    if ($display.innerText === "0") $display.innerText = "";
+                    $display.innerText += e.key;
+                }
             break;
     
             case "9":
-                if ($display.innerText === "0") $display.innerText = "";
-                $display.innerText = $display.innerText += e.key;
+                if ($calc.classList.contains("modeActive")){
+                    if ($valNumber.innerText === "0") $valNumber.innerText = "";
+                    $valNumber.innerText += e.key;
+                }else{
+                    if ($display.innerText === "0") $display.innerText = "";
+                    $display.innerText += e.key;
+                }
             break;
     
             case "0":
-                if ($display.innerText === "0") $display.innerText = "";
-                $display.innerText = $display.innerText += e.key;
+                if ($calc.classList.contains("modeActive")){
+                    if ($valNumber.innerText === "0") $valNumber.innerText = "";
+                    $valNumber.innerText += e.key;
+                }else{
+                    if ($display.innerText === "0") $display.innerText = "";
+                    $display.innerText += e.key;
+                }
             break;
     
             case ".":
-                if ($display.innerText === "0"){
-                    $display.innerText = ".";
-                }else{                
-                    if($display.innerText.includes(".")){
-                        $display.innerText = $display.innerText;
+                if ($calc.classList.contains("modeActive")){
+                    if ($valNumber.innerText === "0"){
+                        $valNumber.innerText = ".";
                     }else{
-                        $display.innerText += e.key;
+                        if ($valNumber.innerText.includes(".")){
+                            $valNumber.innerText;
+                        }else{
+                            $valNumber.innerText += e.key;
+                        }
                     }
-                } 
+                }else{
+                    if ($display.innerText === "0"){
+                        $display.innerText = ".";
+                    }else{                
+                        if($display.innerText.includes(".")){
+                            $display.innerText;
+                        }else{
+                            $display.innerText += e.key;
+                        };
+                    }; 
+                };                
             break;
            
             case "+":
@@ -233,6 +294,7 @@ export function standarMode(){
             break;
     
             case "Escape":
+                $valNumber.innerText = "0";
                 inptVal = "";
                 hisVal = "";
                 op = "";

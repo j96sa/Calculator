@@ -21,4 +21,3 @@ d.addEventListener("DOMContentLoaded",e=>{
     modesCalc();
     modesInteraction();
 });
-

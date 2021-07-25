@@ -2,8 +2,14 @@ export function modesInteraction() {
     const d = document,
     $calc = d.querySelector(".calc");
     
-    d.addEventListener("click",()=>{
+    d.addEventListener("click",()=>{        
+        ejectCode();
+    });
+    d.addEventListener("keyup",()=>{
+        ejectCode();
+    });
 
+    const ejectCode = ()=>{
         if ($calc.classList.contains("modeActive")){
             const $valWork = d.querySelector(".calc_settings h2"),
             $valTransform = d.querySelectorAll(".select_cont select"),
@@ -14,71 +20,71 @@ export function modesInteraction() {
             if ($valWork.innerText === "lenght"){
                 switch ($valTransform[0].value) {                                    
                     case "millimeter":
-                        valConvert = parseInt($valNumber[0].innerText)/1000;
+                        valConvert = eval($valNumber[0].innerText/1000);
                     break;
-                    case "centimeter":
-                        valConvert = parseInt($valNumber[0].innerText)/100;
+                    case "centimeter":                                                     
+                        valConvert = eval($valNumber[0].innerText/100);
                     break;
                     case "meter":
-                        valConvert = parseInt($valNumber[0].innerText);
+                        valConvert = eval($valNumber[0].innerText);
                     break;
                     case "kilometer":
-                        valConvert = parseInt($valNumber[0].innerText)*1000;
+                        valConvert = eval($valNumber[0].innerText*1000);
                     break;
                     case "mile":
-                        valConvert = parseInt($valNumber[0].innerText)*1609.34;
+                        valConvert = eval($valNumber[0].innerText*1609.34);
                     break;
                 };
                 
                 switch ($valTransform[1].value) {
                     case "millimeter":
-                        resFinal = valConvert*1000;
+                        resFinal = eval(valConvert*1000);
                     break;
                     case "centimeter":
-                        resFinal = valConvert*100;
+                        resFinal = eval(valConvert*100);
                     break;
                     case "meter":
-                        resFinal = valConvert;
+                        resFinal = eval(valConvert);                        
                     break;
                     case "kilometer":
-                        resFinal = valConvert/1000;
+                        resFinal = eval(valConvert/1000);
                     break;
                     case "mile":
-                        resFinal = valConvert/1609.34;
+                        resFinal = eval(valConvert/1609.34);
                     break;
                 };
 
                 $valNumber[1].innerText = resFinal;                
-            };
+            };                        
 
             if ($valWork.innerText === "volume"){
                 switch ($valTransform[0].value) {                                    
                     case "milliliters":
-                        valConvert = parseInt($valNumber[0].innerText)/1000;
+                        valConvert = eval($valNumber[0].innerText/1000);
                     break;
                     case "cubic centimeters":
-                        valConvert = parseInt($valNumber[0].innerText)/1000;
+                        valConvert = eval($valNumber[0].innerText/1000);
                     break;
                     case "liters":
-                        valConvert = parseInt($valNumber[0].innerText);
+                        valConvert = eval($valNumber[0].innerText);
                     break;
                     case "cubic meters":
-                        valConvert = parseInt($valNumber[0].innerText)*1000;
+                        valConvert = eval($valNumber[0].innerText*1000);
                     break;                    
                 };                
                 
                 switch ($valTransform[1].value) {                                    
                     case "milliliters":
-                        resFinal = valConvert*1000;
+                        resFinal = eval(valConvert*1000);
                     break;
                     case "cubic centimeters":
-                        resFinal = valConvert*1000;
+                        resFinal = eval(valConvert*1000);
                     break;
                     case "liters":
-                        resFinal = valConvert;
+                        resFinal = eval(valConvert);
                     break;
                     case "cubic meters":
-                        resFinal = valConvert/1000;
+                        resFinal = eval(valConvert/1000);
                     break;                    
                 };
                 
@@ -88,43 +94,43 @@ export function modesInteraction() {
             if ($valWork.innerText === "weight"){
                 switch ($valTransform[0].value) {                                    
                     case "milligram":
-                        valConvert = parseInt($valNumber[0].innerText)/1000;
+                        valConvert = eval($valNumber[0].innerText/1000);
                     break;
                     case "gram":
-                        valConvert = parseInt($valNumber[0].innerText);
+                        valConvert = eval($valNumber[0].innerText);
                     break;
                     case "pound":
-                        valConvert = parseInt($valNumber[0].innerText)*454;
+                        valConvert = eval($valNumber[0].innerText*454);
                     break;
                     case "kilogram":
-                        valConvert = parseInt($valNumber[0].innerText)*1000;
+                        valConvert = eval($valNumber[0].innerText*1000);
                     break;
                     case "ounce":
-                        valConvert = parseInt($valNumber[0].innerText)*28.35;
+                        valConvert = eval($valNumber[0].innerText*28.35);
                     break;
                     case "ton":
-                        valConvert = parseInt($valNumber[0].innerText)*1000000;
+                        valConvert = eval($valNumber[0].innerText*1000000);
                     break;
                 };
                 
                 switch ($valTransform[1].value) {
                     case "milligram":
-                        resFinal = valConvert*1000;
+                        resFinal = eval(valConvert*1000);
                     break;
                     case "gram":
-                        resFinal = valConvert;
+                        resFinal = eval(valConvert);
                     break;
                     case "pound":
-                        resFinal = valConvert/454;
+                        resFinal = eval(valConvert/454);
                     break;
                     case "kilogram":
-                        resFinal = valConvert/1000;
+                        resFinal = eval(valConvert/1000);
                     break;
                     case "ounce":
-                        resFinal = valConvert/28.35;
+                        resFinal = eval(valConvert/28.35);
                     break;
                     case "ton":
-                        resFinal = valConvert/1000000;
+                        resFinal = eval(valConvert/1000000);
                     break;
                 };
 
@@ -134,13 +140,13 @@ export function modesInteraction() {
             if ($valWork.innerText === "temperature"){
                 switch ($valTransform[0].value) {                                    
                     case "celcius":
-                        valConvert = parseInt($valNumber[0].innerText);
+                        valConvert = eval($valNumber[0].innerText);
                     break;
                     case "fahrenheit":
-                        valConvert = parseInt(($valNumber[0].innerText)-32)*(5/9);
+                        valConvert = eval((($valNumber[0].innerText)-32)*(5/9));
                     break;
                     case "kelvin":
-                        valConvert = parseInt($valNumber[0].innerText)-273.15;
+                        valConvert = eval($valNumber[0].innerText-273.15);
                     break;                   
                 };                
                 
@@ -149,10 +155,10 @@ export function modesInteraction() {
                         resFinal = valConvert;
                     break;
                     case "fahrenheit":
-                        resFinal = (valConvert*9/5)+32;                        
+                        resFinal = eval((valConvert*9/5)+32);                        
                     break;
                     case "kelvin":
-                        resFinal = valConvert + 273.15;
+                        resFinal = eval(valConvert + 273.15);
                     break;                 
                 };
                 
@@ -162,43 +168,43 @@ export function modesInteraction() {
             if ($valWork.innerText === "area"){
                 switch ($valTransform[0].value) {                                    
                     case "cm2":
-                        valConvert = parseInt($valNumber[0].innerText)/10000;
+                        valConvert = eval($valNumber[0].innerText)/10000;
                     break;
                     case "m2":
-                        valConvert = parseInt($valNumber[0].innerText);
+                        valConvert = eval($valNumber[0].innerText);
                     break;
                     case "km2":
-                        valConvert = parseInt($valNumber[0].innerText)*1000000;
+                        valConvert = eval($valNumber[0].innerText)*1000000;
                     break;
                     case "mll2":
-                        valConvert = parseInt($valNumber[0].innerText)*2589998;
+                        valConvert = eval($valNumber[0].innerText)*2589998;
                     break;
                     case "hectare":
-                        valConvert = parseInt($valNumber[0].innerText)*10000;
+                        valConvert = eval($valNumber[0].innerText)*10000;
                     break;
                     case "acre":
-                        valConvert = parseInt($valNumber[0].innerText)*4046.856;
+                        valConvert = eval($valNumber[0].innerText)*4046.856;
                     break;
                 };
                 
                 switch ($valTransform[1].value) {
                     case "cm2":
-                        resFinal = valConvert*10000;
+                        resFinal = eval(valConvert*10000);
                     break;
                     case "m2":
-                        resFinal = valConvert;
+                        resFinal = eval(valConvert);
                     break;
                     case "km2":
-                        resFinal = valConvert/1000000;
+                        resFinal = eval(valConvert/1000000);
                     break;
                     case "mll2":
-                        resFinal = valConvert/2589998;
+                        resFinal = eval(valConvert/2589998);
                     break;
                     case "hectare":
-                        resFinal = valConvert/10000;
+                        resFinal = eval(valConvert/10000);
                     break;
                     case "acre":
-                        resFinal = valConvert/4046.856;
+                        resFinal = eval(valConvert/4046.856);
                     break;
                 };
 
@@ -208,64 +214,62 @@ export function modesInteraction() {
             if ($valWork.innerText === "time"){
                 switch ($valTransform[0].value) {                                    
                     case "millisecond":
-                        valConvert = parseInt($valNumber[0].innerText)/3600000;
+                        valConvert = eval($valNumber[0].innerText)/3600000;
                     break;
                     case "second":
-                        valConvert = parseInt($valNumber[0].innerText)/3600;
+                        valConvert = eval($valNumber[0].innerText)/3600;
                     break;
                     case "minute":
-                        valConvert = parseInt($valNumber[0].innerText)/60;
+                        valConvert = eval($valNumber[0].innerText)/60;
                     break;
                     case "hour":
-                        valConvert = parseInt($valNumber[0].innerText)                
+                        valConvert = eval($valNumber[0].innerText)                
                     break;
                     case "day":
-                        valConvert = parseInt($valNumber[0].innerText)*24;
+                        valConvert = eval($valNumber[0].innerText)*24;
                     break;
                     case "week":
-                        valConvert = parseInt($valNumber[0].innerText)*168;
+                        valConvert = eval($valNumber[0].innerText)*168;
                     break;
                     case "month":
-                        valConvert = parseInt($valNumber[0].innerText)*720;
+                        valConvert = eval($valNumber[0].innerText)*720;
                     break;
                     case "year":
-                        valConvert = parseInt($valNumber[0].innerText)*8760;
+                        valConvert = eval($valNumber[0].innerText)*8760;
                     break;
                 };
                 
                 switch ($valTransform[1].value) {                    
                     case "millisecond":
-                        resFinal = valConvert*3600000;
+                        resFinal = eval(valConvert*3600000);
                     break;
                     case "second":
-                        resFinal = valConvert*3600;
+                        resFinal = eval(valConvert*3600);
                     break;
                     case "minute":
-                        resFinal = valConvert*60
+                        resFinal = eval(valConvert*60)
                     break;
                     case "hour":
-                        resFinal = valConvert;
+                        resFinal = eval(valConvert);
                     break;
                     case "day":
-                        resFinal = valConvert/24
+                        resFinal = eval(valConvert/24)
                     break;
                     case "week":
-                        resFinal = valConvert/168;
+                        resFinal = eval(valConvert/168);
                     break;
                     case "month":
-                        resFinal = valConvert/720;
+                        resFinal = eval(valConvert/720);
                     break;
                     case "year":
-                        resFinal = valConvert/8760;
+                        resFinal = eval(valConvert/8760);
                     break;
                 };
 
                 $valNumber[1].innerText = resFinal;                
             };
         }
-    })
-
-
+    };
 
 
 
