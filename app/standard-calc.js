@@ -294,7 +294,7 @@ export function standarMode(){
             break;
     
             case "Escape":
-                $valNumber.innerText = "0";
+                if ($calc.classList.contains("modeActive")) $valNumber.innerText = "0";                
                 inptVal = "";
                 hisVal = "";
                 op = "";
