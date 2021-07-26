@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/91cac70472.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">    
+</head>
+
+<body>    
+
+    <main>
+
+        <section id="calc">
+
+            <div class="calc_settings">                
+                <h2>standard</h2>
+
+                <div class="calc_settings-interactive">
+                    <div class="user-mode noneClass">                    
+                        <i class="far fa-moon"></i>
+                        <i class="far fa-sun"></i>                    
+                    </div>
+                    
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+
+            <!--STANDARD-->
+            <div class="calc">
+
+                <div class="calc-mod_selects noneClass"></div>
+
+                <div class="history"><h4></h4></div>
+                <div class="display"><h2>0</h2></div>                
+
+                <div class="calc_buttons">                    
+                    <span class="act-button clear-button">C</span>
+                    <span class="act-button op2-butt">x ²</span>
+                    <span class="act-button op2-butt">√ ²</span>
+                    <span class="act-button op-butt">/</span>                    
+                    <span class="butt-number">7</span>
+                    <span class="butt-number">8</span>
+                    <span class="butt-number">9</span>
+                    <span class="act-button op-butt">*</span>
+                    <span class="butt-number">4</span>
+                    <span class="butt-number">5</span>
+                    <span class="butt-number">6</span>
+                    <span class="act-button op-butt">-</span>
+                    <span class="butt-number">1</span>
+                    <span class="butt-number">2</span>
+                    <span class="butt-number">3</span>
+                    <span class="act-button op-butt">+</span>
+                    <span class="post-button">+/-</span>
+                    <span class="butt-number">0</span>
+                    <span class="butt-number doc-button">.</span>
+                    <span class="act-button equal-button">=</span>                    
+                </div>
+            </div>    
+            
+            
+            <!--OTHER MODES-->
+            <template id="mod-template">
+            
+                <div class="select_cont select_cont-1">
+                    <h2>0</h2>                    
+                </div>
+                <div class="select_cont select_cont-2">
+                    <h2>0</h2>                    
+                </div>
+            
+            </template>
+
+
+            <!--MENU-->
+            <section id="calc-menu" class="noneClass">
+                <div class="calc-menu">
+                    <span>standard</span>
+                    <span>volume</span>
+                    <span>lenght</span>
+                    <span>weight</span>
+                    <span>temperature</span>
+                    <span>time</span>
+                    <span>area</span>
+                </div>                
+            </section>
+        </section>
+        
+    </main>
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>
